@@ -1,29 +1,21 @@
 const people = [];
 
-class Person {
-    constructor(name, lastname, height) {
-        this.name = name;
-        this.lastname = lastname;
-        this.height = height;
-    }
-}
-
 /* USER INPUT */
 do {
-    people.push(new Person(prompt("Name"), prompt("Lastname"), +prompt("Height")));
+    people.push({name: prompt("Name"), lastname: prompt("Lastname"), height: +prompt("Height")});
 } while(!confirm("End?"))
 
 /* TEST DATA */
-// people.push(new Person("Emma", "Johnson", 170));
-// people.push(new Person("Olivia", "Smith", 160));
-// people.push(new Person("Ava", "Brown", 165));
-// people.push(new Person("Isabella", "Davis", 158));
-// people.push(new Person("Sophia", "Wilson", 170));
-// people.push(new Person("Mia", "Taylor", 165));
-// people.push(new Person("Charlotte", "Anderson", 163));
-// people.push(new Person("Amelia", "Jackson", 168));
-// people.push(new Person("Evelyn", "White", 170));
-// people.push(new Person("Abigail", "Harris", 180));
+people.push({name: "Meredith", lastname: "Grey", height: 170});
+people.push({name: "Amelia", lastname: "Shepard", height: 160});
+people.push({name: "Christina", lastname: "Yang", height: 165});
+people.push({name: "Miranda", lastname: "Bailey", height: 158});
+people.push({name: "Callie", lastname: "Torres", height: 210});
+people.push({name: "Jo", lastname: "Wilson", height: 165});
+people.push({name: "Arizona", lastname: "Robinson", height: 163});
+people.push({name: "Maggie", lastname: "Pierce", height: 168});
+people.push({name: "April", lastname: "Kepner", height: 170});
+people.push({name: "Carina", lastname: "Deluca", height: 180});
 
 const calculateAvgHeight = () => {
     return people.reduce((sum, person) => sum+person.height, 0)/people.length;
