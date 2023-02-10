@@ -1,6 +1,7 @@
 const people = [];
 
 /* USER INPUT */
+alert("Task 1");
 do {
     people.push({name: prompt("Name"), lastname: prompt("Lastname"), height: +prompt("Height")});
 } while(!confirm("End?"))
