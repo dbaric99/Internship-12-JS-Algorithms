@@ -21,7 +21,6 @@ for (let i = 0; i < numberOfPpl; i++) {
 
 const findPeople = () => {
     const sortedPpl = peopleWithDetails.sort((x,y) => x.height - y.height);
-    console.log("MEDIAN: ", Math.floor(sortedPpl.length), sortedPpl.length, Math.floor(sortedPpl.length));
     const medianHeight = sortedPpl[Math.floor(sortedPpl.length/2)]['height'];
     return peopleWithDetails.filter(person => person.eyeColor === person.hairColor && person.height > medianHeight);
 }
