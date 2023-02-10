@@ -34,11 +34,11 @@ let availableFruits = fruitBasket.filter((fruit, index) => !fruitsToSteal.includ
 /* Task 7 */
 let sortedFruitBasketByName = fruitBasket.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-console.log("Fruits whose names are same-ish as their color:", colorFilteredFruitBasket)
-console.log("Entire fruit basket contents:", fruitBasket);
-console.log("Indices of fruits not ready for sale:", fruitsToSteal);
-console.log("Fruits that are available at the moment:", availableFruits);
-console.log("Fruit basket sorted by fruit names:", sortedFruitBasketByName);
+console.log("%c Fruits whose names are same-ish as their color:", 'background: #3993de; color: #efebe8', colorFilteredFruitBasket);
+console.log("%c Entire fruit basket contents:", 'background: #6e2594; color: #fff', fruitBasket);
+console.log("%c Indices of fruits not ready for sale:", 'background: #6e2594; color: #fff', fruitsToSteal);
+console.log("%c Fruits that are available at the moment:", 'background: #6e2594; color: #fff', availableFruits);
+console.log("%c Fruit basket sorted by fruit names:", 'background: #a71d31; color: #f1f0cc', sortedFruitBasketByName);
 
 
 /* >>>>>>>> FRUITS WITH MULTIPLE COLORS <<<<<<<< */
