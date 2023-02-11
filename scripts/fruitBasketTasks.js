@@ -34,6 +34,7 @@ let availableFruits = fruitBasket.filter((fruit, index) => !fruitsToSteal.includ
 /* Task 7 */
 let sortedFruitBasketByName = fruitBasket.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
+console.log("%c Fruit basket", "background: #b0413e; color: white; font-weight: bold; font-size: 20px;");
 console.log("%c Fruits whose names are same-ish as their color:", 'background: #3993de; color: #efebe8', colorFilteredFruitBasket);
 console.log("%c Entire fruit basket contents:", 'background: #6e2594; color: #fff', fruitBasket);
 console.log("%c Indices of fruits not ready for sale:", 'background: #6e2594; color: #fff', fruitsToSteal);
@@ -59,3 +60,24 @@ const multicoloredFruit = [
     new Fruit('maracuya', ['yellow'], false)
 ];
    
+console.log("%c Multicolored fruits", "background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red); color: white; font-weight: bold; font-size: 20px;");
+
+/* Task 4 */
+let ripenedFruit = multicoloredFruit.map((fruit) => {
+    if(fruit.color.includes('yellow')) {
+        let newColors;
+        if(!fruit.color.includes('red')) {
+            newColors = fruit.color.map(color => color === 'yellow' ? 'red' : color);
+        } else {
+            newColors = fruit.color.filter(color => color !== 'yellow');
+        }
+        return new Fruit(fruit.name, newColors, fruit.isForSale);
+    }
+    return fruit;
+})
+/* Task 5 */
+let fruitThatCanBeYellow = multicoloredFruit.filter((fruit) => fruit.color.includes('yellow'));
+
+console.log("Fruits before:", multicoloredFruit);
+console.log("Ripened fruit:", ripenedFruit);
+console.log("Yellow fruit:", fruitThatCanBeYellow);
