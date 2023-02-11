@@ -1,4 +1,12 @@
-//Tasks 3, 6 and 7
+/* CONSOLE STYLES */
+let fruitBasketTitleStyle = "background: #b0413e; color: white; font-weight: bold; font-size: 20px;";
+let multicoloredFruitTitleStyle = "background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red); color: white; font-weight: bold; font-size: 20px;";
+let task3Style = "background: #202c59; color: #fff";
+let task4Style = 'background: #820263; color: #fff';
+let task5Style = "background: #fbaf00; color: #fff";
+let task6Style = "background: #d95d39; color: #fff";
+let task7Style = "background: #417b5a; color: #fff";
+
 class Fruit {
     constructor(name, color, isForSale) {
         this.name = name;
@@ -23,6 +31,8 @@ const fruitBasket = [
     new Fruit('blackberry', 'black', true)
 ];
 
+console.log("%c Fruit basket ", fruitBasketTitleStyle);
+
 /* Task 3 */
 let colorFilteredFruitBasket = fruitBasket.filter((fruit) => fruit.name.includes(fruit.color));
 /* Task 6 */
@@ -34,12 +44,11 @@ let availableFruits = fruitBasket.filter((fruit, index) => !fruitsToSteal.includ
 /* Task 7 */
 let sortedFruitBasketByName = fruitBasket.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-console.log("%c Fruit basket", "background: #b0413e; color: white; font-weight: bold; font-size: 20px;");
-console.log("%c Fruits whose names are same-ish as their color:", 'background: #3993de; color: #efebe8', colorFilteredFruitBasket);
-console.log("%c Entire fruit basket contents:", 'background: #6e2594; color: #fff', fruitBasket);
-console.log("%c Indices of fruits not ready for sale:", 'background: #6e2594; color: #fff', fruitsToSteal);
-console.log("%c Fruits that are available at the moment:", 'background: #6e2594; color: #fff', availableFruits);
-console.log("%c Fruit basket sorted by fruit names:", 'background: #a71d31; color: #f1f0cc', sortedFruitBasketByName);
+console.log("%c Fruits whose names are same-ish as their color: ", task3Style, colorFilteredFruitBasket);
+console.log("%c Entire fruit basket contents: ", task6Style, fruitBasket);
+console.log("%c Indices of fruits not ready for sale: ", task6Style, fruitsToSteal);
+console.log("%c Fruits that are available at the moment: ", task6Style, availableFruits);
+console.log("%c Fruit basket sorted by fruit names: ", task7Style, sortedFruitBasketByName);
 
 
 /* >>>>>>>> FRUITS WITH MULTIPLE COLORS <<<<<<<< */
@@ -60,7 +69,7 @@ const multicoloredFruit = [
     new Fruit('maracuya', ['yellow'], false)
 ];
    
-console.log("%c Multicolored fruits", "background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red); color: white; font-weight: bold; font-size: 20px;");
+console.log("%c Multicolored fruits ", multicoloredFruitTitleStyle);
 
 /* Task 4 */
 let ripenedFruit = multicoloredFruit.map((fruit) => {
@@ -78,6 +87,6 @@ let ripenedFruit = multicoloredFruit.map((fruit) => {
 /* Task 5 */
 let fruitThatCanBeYellow = multicoloredFruit.filter((fruit) => fruit.color.includes('yellow'));
 
-console.log("Fruits before:", multicoloredFruit);
-console.log("Ripened fruit:", ripenedFruit);
-console.log("Yellow fruit:", fruitThatCanBeYellow);
+console.log("%c Fruits before: ", task4Style, multicoloredFruit);
+console.log("%c Ripened fruit: ", task4Style, ripenedFruit);
+console.log("%c Yellow fruit: ", task5Style, fruitThatCanBeYellow);
