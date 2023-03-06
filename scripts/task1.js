@@ -24,7 +24,7 @@ const calculateAvgHeight = () => {
 
 const findOutlier = (avgHeight) => {
     const difference = (person) => Math.abs(person.height - avgHeight);
-    return people.sort((x, y) => difference(x) - difference(y))[0];
+    return people.sort((x, y) => difference(y) - difference(x))[0];
 }
 
 console.log("Average height:", calculateAvgHeight());
